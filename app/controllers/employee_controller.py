@@ -21,7 +21,7 @@ def create_employee():
 def read_employees():
     employees = Employee.get_all()
     message = "Employees found successfully" if employees else "Employee not found"
-    return jsonify({"message": message, "data": employees})
+    return jsonify({"message": message, "data": employees}), 200
 
 
 @admin_required
@@ -43,7 +43,7 @@ def update_employee(employee_id):
         return jsonify({"message": "Name and position are required"}), 400
 
     Employee.update(employee_id, name, position)
-    return jsonify({"id": employee_id, "name": name, "position": position})
+    return jsonify({"id": employee_id, "name": name, "position": position}), 200
 
 
 @admin_required
