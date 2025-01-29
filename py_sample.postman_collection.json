@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "b7d3f40c-7c40-483a-af05-ae5d0091c638",
+		"name": "py_sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38547895"
+	},
+	"item": [
+		{
+			"name": "Create an employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Vatsal\",\r\n    \"position\": \"Software engineer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an employee by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/employee/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Deval Devda\",\r\n    \"position\": \"Jr. Software engineer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/employee/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/employee/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Temp Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/employee/generate_token",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"generate_token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

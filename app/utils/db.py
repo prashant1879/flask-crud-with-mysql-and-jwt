@@ -1,5 +1,4 @@
 import mysql.connector
-from flask_jwt_extended import create_access_token
 import os
 
 # MySQL database configuration
@@ -17,8 +16,3 @@ db_config = {
 
 def get_db_connection():
     return mysql.connector.connect(**db_config)
-
-
-def generate_temp_token():
-    # Create JWT token with additional claims (e.g., role)
-    return create_access_token(additional_claims={"role": "admin"})
