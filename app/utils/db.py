@@ -1,16 +1,13 @@
 import mysql.connector
+from app.utils.config import config
 import os
 
 # MySQL database configuration
 db_config = {
-    # "host": "localhost",  # Use "db" for Docker Compose
-    # "user": "dbroot",
-    # "password": "root",
-    # "database": "py_sample",
-    "host": os.getenv("DB_HOST"),
-    "user": os.getenv("DB_USER"),
-    "password": os.getenv("DB_PASSWORD"),
-    "database": os.getenv("DB_NAME"),
+    "host": config.DB_HOST,
+    "user": config.DB_USER,
+    "password": config.DB_PASSWORD,
+    "database": config.DB_NAME,
 }
 
 
